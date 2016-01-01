@@ -1,0 +1,403 @@
+<html lang="en"
+      class="k-webkit k-webkit34 js flexbox flexboxlegacy canvas canvastext webgl no-touch postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg">
+<head>
+    <title>myCOOP&#8482;</title>
+    <meta charset="utf-8">
+    <!-- make IE render in its highest available mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/styles/app/app.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/app/welcome.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/ng-grid.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/app/helpers.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/restyling.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/animations.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/new-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/spectrum.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/vendor/jquery-ui-1.10.4.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/vendor/bootstrap-tokenfield.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/vendor/tokenfield-typeahead.css"/>
+    <link href="/styles/vendor/angular-carousel.css" rel="stylesheet" type="text/css" />
+
+
+
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
+    <script type="text/javascript" src="/scripts/libraries/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/jquery-scrollto.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/underscore.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/spectrum.js"></script>
+
+    <script type="text/javascript" src="/scripts/libraries/angular-file-upload-shim.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-animate.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-cookies.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-route.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-resource.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-touch.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-google-maps.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-carousel.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-file-upload.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/ng-grid.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-spectrum-colorpicker.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/typeahead.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/bootstrap-tokenfield.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/richmarker.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/jquery.shapeshift.js"></script>
+
+    <script type="text/javascript" src="/scripts/libraries/primitives.latest.js"></script>
+    <link href="/styles/vendor/primitives.latest.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="/scripts/libraries/ng-map.min.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/libraries/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/ui-bootstrap-tpls.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/scripts/resources/process.js"></script>
+    <script type="text/javascript" src="/scripts/resources/org-entity.js"></script>
+    <script type="text/javascript" src="/scripts/resources/user.js"></script>
+    <script type="text/javascript" src="/scripts/resources/group.js"></script>
+    <script type="text/javascript" src="/scripts/resources/text-editor.js"></script>
+    <script type="text/javascript" src="/scripts/resources/component.js"></script>
+    <script type="text/javascript" src="/scripts/resources/document-template.js"></script>
+    <script type="text/javascript" src="/scripts/resources/workspace-template.js"></script>
+    <script type="text/javascript" src="/scripts/resources/incident.js"></script>
+    <script type="text/javascript" src="/scripts/resources/report.js"></script>
+
+    <script type="text/javascript" src="/scripts/admin-app.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/org-chart.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/organization.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/business-process.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/user.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/group.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/delivery.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/template-collection.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/section-editor.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/setup.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/resource-directories.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/org-unit.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/system-permissions.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/ui.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/general-configuration.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/advanced-configuration.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/workflow.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/document-template.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/workspace-template.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/dashboard.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/admin/reporting.js"></script>
+
+    <script type="text/javascript" src="/scripts/controllers/common/common.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/common/map.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/common/print.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/common/incident.js"></script>
+
+    <script type="text/javascript" src="/scripts/directives/popover.js"></script>
+    <script type="text/javascript" src="/scripts/directives/autocomplete.js"></script>
+    <script type="text/javascript" src="/scripts/directives/location.js"></script>
+    <script type="text/javascript" src="/scripts/directives/text-editor.js"></script>
+    <script type="text/javascript" src="/scripts/directives/directives.js"></script>
+    <script type="text/javascript" src="/scripts/filters/dot-text.js"></script>
+
+    <script type="text/javascript" src="/scripts/services/interceptor.js"></script>
+    <script type="text/javascript" src="/scripts/services/modal.js"></script>
+    <script type="text/javascript" src="/scripts/services/security.js"></script>
+
+    <script type="text/javascript" src="/scripts/helpers/regex.js"></script>
+    <script type="text/javascript" src="/scripts/helpers/prototypes.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/contentflow.js"></script>
+    <style>
+        ul#navigation li > ul, ul#tax_summary_nav li > ul {
+            display: block;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+<body class="pgtype_ezpg sku_512" ng-app="adminApp">
+
+<div id="ttoContainer" class="" style="visibility: visible;">
+<div id="contentOverlay"></div>
+<nav id="topbar" class="navbar {{showNav}}">
+    <div class="container">
+        <a href="javascript:;" ng-click="toggleNav()" id="slide_main_navigation"
+           class="pull-left visible-sm visible-xs"></a>
+
+        <a id="" style="display: block" href="/#/admin-welcome" title="myCOOP">
+
+            <img src="/images/sample-logo.png" alt=""
+                 style="float:left;  height: 60px; margin-right: 10px; margin-top: 0px;"/>
+        </a>
+
+        <a class="pull-right visible-lg visible-md" style="display: block" href="/#/admin-welcome" title="myCOOP">
+
+            <h1 class="hidden-xs" style="color: #ffffff; font-size: 30px; margin-top: 7px; float: left">myCOOP&#8482;</h1>
+            <h2 class="visible-xs" style="color: #ffffff;margin-top:10px; margin-left: 20px; float: left">
+                myCOOP&#8482;</h2>
+        </a>
+        <a href="#" ng-click="isSearchVisible = true" ng-hide="isSearchVisible" class="pull-right"><span style="font-size: 25px; margin-top: 10px; color: #ffffff; margin-right: 15px" class="glyphicon glyphicon-search"></span></a>
+        <div id="help_search_wrapper" ng-show="isSearchVisible" style="margin-left: 0px">
+            <!-- see components/HelpSearch/HelpSearch.js -->
+            <form id="helpSearch" target="_blank">
+                <!-- TODO: edit these ids? -->
+                <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                    <input
+                        class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled=""
+                        style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background-attachment: scroll; background-clip: border-box; background-color: rgba(0, 0, 0, 0); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input
+                        type="text" id="chatQuestion" class="typeahead tt-query" autocomplete="off" spellcheck="false"
+                        dir="auto" placeholder="Ask a question..."
+                        style="position: relative; vertical-align: top; background-color: transparent;">
+                    <span
+                        style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: 'Avenir light', Helvetica, Arial, san-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span
+                        class="tt-dropdown-menu"
+                        style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span>
+                <a id="chatAskButton">?</a>
+            </form>
+
+        </div>
+        <!-- click handlers set in TTOApp.Navigation _init -->
+        <div id="account" class="pull-right visible-lg visible-md">
+            <ul class="nav navbar-nav">
+                <li><a href="" id="DA_EXIT" class="signOutTrigger" ng-click="logout()">Sign Out</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+</nav>
+<!-- end topbar -->
+
+<div id="main" class="container {{showNav}}" style="min-height: 729px; height: auto;">
+    <div id="main_divider" class="visible-lg visible-md">
+        <div class="bottom_fade"></div>
+    </div>
+    <div id="main_navigation" class="{{showNav}}">
+        <div id="donutchart" style="width:100px; height: 100px; margin: 0 auto"></div>
+        <div id="tabRegion"></div>
+        <!-- visibility controlled through media queries in Navigation.less -->
+        <ul id="navigation" role="navigation">
+            <li ng-class="{ on: $state.includes('dashboard') }">
+                <a ui-sref="dashboard.main">DASHBOARD</a>
+                <ul ng-show=" $state.includes('dashboard')">
+                    <li ng-class="{ on: $state.includes('dashboard.map') }">
+                        <a ui-sref="dashboard.map">Situational Awareness Map</a>
+                        <ul style="margin-top: 10px" ng-show="$state.includes('dashboard.map')">
+                            <li ng-class="{ on: $state.includes('dashboard.map') }">
+                                <a ui-sref="dashboard.map">All Business Locations</a></li>
+                            <li ng-class="{ on: $state.includes('config.security.users') }">
+                                <a href="">My Work Locations</a></li>
+                            <li ng-class="{ on: $state.includes('config.security.groups') }">
+                                <a href="">My Recovery Facilities</a></li>
+                            <li ng-class="{ on: $state.includes('config.security.workspace') }">
+                                <a href="">My Alternate Facilities</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li ng-class="{ on: $state.includes('config') }">
+                <a ui-sref="config.profile">CONFIGURE</a>
+                <ul ng-show=" $state.includes('config')">
+                    <li ng-class="{ on: $state.includes('config.profile') }">
+                        <a ui-sref="config.profile">Organization Profile</a></li>
+                    <li ng-class="{ on: $state.includes('config.standards') }">
+                        <a ui-sref="config.standards">Standards and Compliance</a></li>
+                    <li ng-class="{ on: $state.includes('config.general') || $state.includes('config.ui') }">
+                        <a ui-sref="config.general">General Configuration</a>
+                        <ul style="margin-top: 10px" ng-show="$state.includes('config.general') || $state.includes('config.ui') ">
+                            <li ng-class="{ on: $state.includes('config.ui') }"><a ui-sref="config.ui">Look and Feel</a></li>
+                        </ul>
+                    </li>
+                    <li ng-class="{ on: $state.includes('config.advanced') }">
+                        <a ui-sref="config.advanced">Advanced Configuration</a>
+                        <ul  style="margin-top: 10px" ng-show="$state.includes('config.advanced') || $state.includes('config.resources') || $state.includes('config.templates') ">
+                            <li ng-class="{ on: $state.includes('config.resources') }">
+                                <a ui-sref="config.resources">Resource Directories</a></li>
+                            <li ng-class="{ on: $state.includes('config.templates') }">
+                                <a ui-sref="config.templates">Template Collection</a></li>
+                        </ul>
+                    </li>
+
+                    <li ng-class="{ on: $state.includes('config.orgunits') }">
+                        <a ui-sref="config.orgunits">Hierarchy Management</a></li>
+                    <li ng-class="{ on: $state.includes('config.security') }">
+                        <a ui-sref="config.security.system">Security Configuration</a>
+                        <ul style="margin-top: 10px" ng-show="$state.includes('config.security')">
+                            <li ng-class="{ on: $state.includes('config.security.system') }">
+                                <a ui-sref="config.security.system">System Permissions</a></li>
+                            <li ng-class="{ on: $state.includes('config.security.users') }">
+                                <a ui-sref="config.security.users">Users</a></li>
+                            <li ng-class="{ on: $state.includes('config.security.groups') }">
+                                <a ui-sref="config.security.groups">Groups</a></li>
+                            <li ng-class="{ on: $state.includes('config.security.workspace') }">
+                                <a ui-sref="config.security.workspace">Workspace Permissions</a></li>
+                        </ul>
+                    </li>
+                    <li ng-class="{ on: $state.includes('config.workflow') }">
+                        <a ui-sref="config.workflow">Workflow Configuration</a></li>
+                    <li ng-class="{ on: $state.includes('config.review') }">
+                        <a ui-sref="config.review">Setup Review</a></li>
+                </ul>
+            </li>
+
+
+
+            <li ng-class="{ on: $state.includes('tools') }"><a ui-sref="tools.reporting" data-submit-val="13"
+                                                               id="auto_id_18">TOOLS</a>
+                <ul ng-show="$state.includes('tools')">
+                    <li ng-class="{ on: $state.includes('tools.reporting') }"><a ui-sref="tools.reporting"
+                                                                                 data-submit-val="14" id="auto_id_19"><span class="glyphicon glyphicon-file"></span> Reporting Tool</a>
+                    </li>
+                    <li ng-class="{ on: $state.includes('tools.incident') }"><a ui-sref="tools.incident.report"
+                                                                                 data-submit-val="14" id="auto_id_19"><span class="glyphicon glyphicon-exclamation-sign"></span>  Report an Incident</a>
+                    </li>
+                    <li ng-class="{ on: $state.includes('tools.controls') }"><a ui-sref="tools.controls"
+                                                                                data-submit-val="22"> <span class="glyphicon glyphicon-wrench"></span> Application
+                        Controls</a></li>
+                    <li ng-class="{ on: $state.includes('tools.print') }"><a ui-sref="tools.print" data-submit-val="22"><span class="glyphicon glyphicon-print"></span> Print
+                        Center</a></li>
+                    <li ng-class="{ on: $state.includes('tools.audit') }"><a ui-sref="tools.audit" data-submit-val="22"><span class="glyphicon glyphicon-eye-open"></span> Audit
+                        Center</a></li>
+                    <li ng-class="{ on: $state.includes('tools.notification') }"><a ui-sref="tools.notification"
+                                                                                    data-submit-val="16"><span class="glyphicon glyphicon-bell"></span> Notification
+                        Interface </a></li>
+                    <li ng-class="{ on: $state.includes('tools.templatesuite') }"><a ui-sref="tools.template-suite"
+                                                                                    data-submit-val="16"><span class="glyphicon glyphicon-cog"></span> Standards
+                         </a></li>
+                    <li ng-class="{ on: $state.includes('tools.document-templates') }"><a ui-sref="tools.document-templates"
+                                                                                          data-submit-val="16"><span class="glyphicon glyphicon-list-alt"></span> Template Collection
+                    </a></li>
+                    <li ng-class="{ on: $state.includes('tools.workspace-templates') }"><a ui-sref="tools.workspace-templates"
+                                                                                          data-submit-val="16"><span class="glyphicon glyphicon-briefcase"></span> Workspace Templates
+                    </a></li>
+                    <li ng-class="{ on: $state.includes('tools.billing') }"><a ui-sref="tools.billing"
+                                                                                          data-submit-val="16"><span class="glyphicon glyphicon-usd"></span> Billing
+                    </a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!--<div id="navTools">-->
+            <!--<ul data-visible="@{ ${refundExplanationViewModel.rexIsOpen} !== true }">-->
+                <!--<li><a href="#" id="tool_00_TOOLS" class="toolsTrigger"><span class="navIcon"></span><span-->
+                        <!--class="navLabel">Tools</span></a>-->
+                <!--</li>-->
+                <!--<li><a href="#" id="printCenter" class="printCenterTrigger"><span class="navIcon"></span><span-->
+                        <!--class="navLabel">Print Center</span></a></li>-->
+                <!--<li><a href="#" id="myAccountNav" class="myAccountTrigger visible-sm visible-xs"><span-->
+                        <!--class="navIcon"></span><span class="navLabel">My myCOOP</span></a></li>-->
+                <!--<li><a href="#" id="DA_EXITNav" class="signOutTrigger visible-sm visible-xs"><span-->
+                        <!--class="navIcon"></span><span class="navLabel">Sign Out</span></a></li>-->
+                <!--<li><a href="#" id="upgradeButton" data-event="upgrade" class="upgradeTrigger"><span-->
+                        <!--class="navIcon"></span><span-->
+                        <!--class="navLabel">Upgrade</span></a></li>-->
+                <!--<li data-visible="@{ ${rueDashboardModel.rueEnabledFlag} === true }" style="display: none;">-->
+                    <!--<a href="#" id="switchToClassicNav" data-event="rue.dashboard.dashboardUserAction"-->
+                       <!--data-event-options="{ action : 'switchToClassic' }" class="switchToClassicTrigger">-->
+                        <!--<span class="navIcon"></span><span class="navLabel">Switch to classic myCOOP</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li data-visible="@{ ${rueDashboardModel.rueEnabledFlag} !== true &amp;&amp; ${uiRegionModel.canSwitchToRue} === true }"-->
+                    <!--style="display: none;">-->
+                    <!--<a href="#" id="switchToRueNav" data-event="switchToRueFromClassicConfirm"-->
+                       <!--class="switchToRueTrigger">-->
+                        <!--<span class="navIcon"></span><span class="navLabel">Switch back to new myCOOP</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+    </div>
+    <!-- end #main_navigation -->
+
+    <div id="main_right" style="display: block;" >
+
+        <div ui-view="" autoscroll="true" class="view-animate-container">
+            <div ui-view="" autoscroll="true" class="view-animate"></div>
+        </div>
+
+        <footer id="footerLayer" align="center" role="contentinfo">
+            <!-- actions setup in zStaticRegion._setPrivacy -->
+            <div class="links">
+                <div class="footer-logo"></div>
+                <a href="javascript:;" id="license_agreement">License Agreement</a>
+                | <a href="javascript:;" id="privacy">Privacy</a>
+                | <a href="javascript:;" id="security">Security</a>
+                | <a href="javascript:;" id="support">Support</a>
+
+                <br>© 2014 myCOOP&#8482; Inc. All rights reserved.
+            </div>
+            <div id="promoLayer" style="visibility: hidden;"></div>
+            <div></div>
+        </footer>
+
+
+    </div>
+    <!-- end #main_right -->
+
+    <div id="rex_main_right" data-viewport="rexViewport"></div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #ttoContainer -->
+
+</body>
+<script type="text/javascript">
+   var cScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]);
+   var width = 120,
+           height = 120,
+   data = [[0,20,"#add100", 'Business Continuity Plan'], [20,40,"#5a9c00", 'Business Impact Analysis'], [40,60,"#d3d3d3"],[60,80,"#d3d3d3"],[80,100,"#d3d3d3"]]
+
+   var vis = d3.select("#donutchart").append("svg")
+           .attr("width", width)
+           .attr("height", height);
+
+   var arc = d3.svg.arc()
+           .innerRadius(27)
+           .outerRadius(50)
+           .startAngle(function(d){return cScale(d[0]);})
+           .endAngle(function(d){return cScale(d[1]);});
+
+   d3.select('svg').append('text')
+           .attr('x', 33)
+           .attr('y', 60)
+           .attr('font-size', '2.1rem')
+           .attr('font-weight','bold')
+           .text('20%')
+           .attr('fill', '#007ac9')
+
+   var tooltip = d3.select("body")
+           .append("div")
+           .style("position", "absolute")
+           .style("z-index", "30")
+           .style('background', '#33b8f3')
+           .style('color', 'white')
+           .style("visibility", "hidden")
+           .text("tooltip");
+
+   vis.selectAll("path")
+           .data(data)
+           .enter()
+           .append("path")
+           .attr("d", arc)
+           .style("fill", function(d){return d[2];})
+           .style('cursor', function(d){if (d[2] === '#add100' || d[2] === '#5a9c00') return 'pointer' })
+           .attr("transform", "translate(50,50)")
+           .on("mouseover", function(){return tooltip.style("visibility", "visible");})
+           .on("mousemove", function(d){ return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text(d[3]);})
+           .on("mouseout", function(){return tooltip.style("visibility", "hidden");})
+           .on('click', function(d){
+               if (d[2] === '#add100') window.location.href = '#/continuity/profile'
+               else if (d[2] === '#5a9c00') window.location.href = '#/impact/processes'
+           })
+
+
+
+</script>
+</html>

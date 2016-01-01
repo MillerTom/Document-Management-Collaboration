@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCoopWebApi", "MyCoopWebApi\MyCoopWebApi.csproj", "{01B98606-6D40-448C-9871-FC8032F2C3DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCoop.Services", "MyCoop.Services\MyCoop.Services.csproj", "{C3BE913D-D234-42E0-89A0-5C91825DF989}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01B98606-6D40-448C-9871-FC8032F2C3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B98606-6D40-448C-9871-FC8032F2C3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B98606-6D40-448C-9871-FC8032F2C3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B98606-6D40-448C-9871-FC8032F2C3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BE913D-D234-42E0-89A0-5C91825DF989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BE913D-D234-42E0-89A0-5C91825DF989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BE913D-D234-42E0-89A0-5C91825DF989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BE913D-D234-42E0-89A0-5C91825DF989}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,253 @@
+<!--[if i]><![endif]-->
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>
+<html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="lt-ie10 lt-ie9 lt-ie8 eq-ie7"> <![endif]-->
+<!--[if IE 8]>
+<html class="lt-ie10 lt-ie9 eq-ie8"> <![endif]-->
+<!--[if IE 9]>
+<html class="lt-ie10 eq-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="" lang="en-US"> <!--<![endif]-->
+<head>
+    <meta http-equiv=X-UA-Compatible content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="ius-theme" content="none"/>
+
+    <title>myCOOP&#8482;</title>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var appVars = {
+            version: "2.14.49",
+            sessionTimeout: "20",
+            jsLogLevel: "2",
+            displayErrorDetails: "false",
+            COOPYear: "2013",
+
+            // Default priority code
+            priorityCode: "3468337910",
+
+            useMockData: false,
+            myAccountAllocation: "",
+            createAccountAllocation: "",
+            framing: "none",
+            maxFileUploadSize: "5242880",
+            supportedImageTypes: ['gif', 'png', 'jpg', 'jpeg', 'bmp'],
+            ciEnvionmentConfig: "prod",
+            percentFundedThreshold: "80",
+            percentSurveyChance: 0,
+            searchBoxPlaceholderText: "Ask for help here",
+
+
+            featureSecurityIncrease: false,
+            featureRedirectOnSignIn: false,
+            featureRedirectServerQA: false,
+            featureHealthcare: true,
+            featureIusSignin: true,
+            featureMoneyFinder: true,
+            featureDispatcher: true,
+            featureFatalJS: false,
+            featureVaultOpenForNewUsers: false,
+            featureInstaRefund: true,
+            featureWidgetAnalyticsOff: false,
+            featureRefundInfo: true,
+
+            FAFSALink: "ctg.discovery.myCOOP.com/fafsa"
+        };
+        //]]>
+    </script>
+    <style>@font-face {
+        font-family: "tticons";
+        src: url("/static/errorstyle/css/font/tticons/tticons.eot");
+        src: url("/static/errorstyle/css/font/tticons/tticons.eot?#iefix") format("embedded-opentype"), url("/static/errorstyle/css/font/tticons/tticons.ttf") format("truetype"), url("/static/errorstyle/css/font/tticons/tticons.svg#tticons") format("svg"), url("/static/errorstyle/css/font/tticons/tticons.woff") format("woff");
+        font-weight: normal;
+        font-style: normal
+    }</style>
+
+
+    <link rel="stylesheet" type="text/css" href="/fonts/Avenir/Avenir.css"/>
+    <link rel="stylesheet" type="text/css" href="/fonts/TurboDigs/TurboDigs.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/app/aggregate-index.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/restyling.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="/styles/app/app.css"/>-->
+
+    <script type="text/javascript" src="/scripts/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/code-overlay.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/libraries/angular.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-cookies.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-route.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/angular-resource.js"></script>
+
+
+
+    <script type="text/javascript" src="/scripts/libraries/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="/scripts/libraries/ui-bootstrap-tpls.js"></script>
+
+    <script type="text/javascript" src="/scripts/filters/dot-text.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/resources/user.js"></script>
+
+    <script type="text/javascript" src="/scripts/services/security.js"></script>
+
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/main.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/options.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/login.js"></script>
+
+
+</head>
+<body class="myTT" ng-app="myCoopApp">
+<nav role="navigation" id="navigation" class="flyout-navigation navigation hidden-md hidden-lg navigationFlyout"
+     style="display:none">
+    <ul class="nav" dir="RTL">
+        <li class="auth-only hidden dropdown" id="dropdowndiv">
+            <a href="#" id="headerAccountName" class="goHome category defaultExpanded navDestination"
+               automationid="headermyCOOPHeader">myCOOP</a>
+        </li>
+        <li class="auth-only hidden dropdown">
+            <a href="#" automationid="COOPReturnsHeader" class="navDestination">myCOOP Timeline</a>
+        </li>
+        <li class="auth-only hidden dropdown ">
+            <a href="#orders" automationid="vaultHeader" class="navDestination">My Orders</a>
+        </li>
+        <li class="auth-only hidden dropdown ">
+            <a href="#accountInfo" automationid="accountInfoHeader" class="navDestination">Account Settings</a>
+        </li>
+        <li class="auth-only hidden dropdown ">
+            <a href="#moneyTools" class="moneyTools navDestination" automationid="moneyToolsHeader">Money Tools</a>
+        </li>
+        <li class="auth-only hidden dropdown ">
+            <a href="#vault" automationid="vaultHeader" class="navDestination">myCOOP Vault</a>
+        </li>
+        <li class="auth-only hidden dropdown sign-out-collapsed">
+            <a href="javascript:void(0);" automationid="signOut" class="signOut navDestination" id="signOutFlyOut">Sign
+                Out</a>
+        </li>
+    </ul>
+</nav>
+<div class="global-wrapper wrapper">
+    <header role="banner" class="main">
+        <div class="navbar navbar-static-top">
+            <div class="container">
+                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+                <a class="flyout-toggle hidden auth-only"><span aria-hidden="true" class="TD-list"></span></a>
+                <a id="" style="display: block" href="/#/main" title="myCOOP">
+
+                    <img src="/images/sample-logo.png"
+                         alt=""
+                         style="float:left; height: 60px; margin-right: 10px; margin-top: 7px;"/>
+                </a>
+                <a href="javascript:void(0);" id="HeaderSignInButton" automationid="signIn"
+                   class="signIn topSpace btn btn-orange navDestination" style="display:none;">Sign In</a>
+
+                <a id="logo" href="#" class="goHome pull-right navDestination" style="margin-left: 10px" alt="myCOOP">
+
+
+                    <h1 class="hidden-xs" style="color: #ffffff; margin-top: 20px; font-size: 30px; float: left">myCOOP&#8482;</h1>
+
+                    <h2 class="visible-xs" style="color: #ffffff; margin-top: 15px; float: left">myCOOP&#8482;</h2>
+                </a>
+                <form ng-show="isSearchVisible" id="navSearchForm" class="navSearchForm staticLink" style="margin-left: 0">
+                    <span id="highlightFocus"><input type="text" id="navSearchBox" data-isplaceholder="0"/><!--
+                    --><div class="searchBoxClose"><span class="TD-x3"></span></div><!--
+                    --><input id="SearchFormSubmit" type="image"
+                              src="/experiences/default/images/nav_mag_glass.png"/>
+                    </span>
+                </form>
+                <span href="#" ng-click="isSearchVisible = true" ng-hide="isSearchVisible" class="pull-right"><span style="cursor:pointer; color:#ffffff; font-size: 25px; margin-top: 22px; margin-right: 10px" class="glyphicon glyphicon-search"></span></span>
+                <a ng-show="isLoggedIn" ng-click="logout()" href="" automationid="signOut" style="margin-right: 30px"
+                   class="signOut staticLink auth-only navDestination sign-out-header" id="signOutHeaderLink">Sign
+                    Out</a>
+                <nav role="navigation" id="navigation"
+                     class="flyout-navigation navigation visible-md visible-lg navigationHover">
+                    <ul class="nav" dir="RTL">
+                        <!--<li ng-hide="isLoggedIn" class="dropdown" id="dropdowndiv">-->
+                        <!--<a href="#" id="headerAccountName" class="goHome category defaultExpanded navDestination"-->
+                        <!--automationid="headermymyCOOPHeader">BCM Resource Links</a>-->
+                        <!--<ul class="menu">-->
+                        <!--<li class="auth-only"><a href="http://fema.gov/" target="_blank" automationid="COOPReturnsHeader" class="navDestination">FEMA.gov</a></li>-->
+
+                        <!--</ul>-->
+                        <!--</li>-->
+                        <li class="auth-only hidden dropdown sign-out-collapsed"><a href="javascript:void(0);"
+                                                                                    automationid="signOut"
+                                                                                    class="signOut navDestination">Sign
+                            Out</a></li>
+
+                        <li class="noDropDown">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="wrapper" ng-view="">
+    </div>
+
+    <div class="push"></div>
+
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row shared-footer">
+            <div class="col-xs-12">
+                <p class="footer-line">
+                    <!--<img style="margin-bottom: 10px; display: block; margin: 0" src="/experiences/default/images/coop-logo.png" alt=""/>-->
+
+                <div class="footer-logo"></div>
+                </p>
+                <p class="footer-line">
+                    <span id="license">
+                        <a target="_blank" id="licenseSmnt"
+                           href="#"
+                           class="footer-link">Software License Agreements</a> |</span>
+                    <a
+                            target="_blank" id="privacy" href="#"
+                            class="footer-link">Privacy Statement</a>
+                </p>
+
+                <p class="footer-line">
+                    Security Certification of the myCOOP&#8482; Online application has been performed by <a
+                        href="#" class="footer-link"
+                        target="_blank">C-Level Security</a>
+                </p>
+
+                <p class="footer-line">
+                    &copy;2014 myCOOP&#8482; Inc. All rights reserved.
+                </p>
+
+                <div class="certified-logo centered">
+
+                    <a class="logo-nResult" data-link-id="610" target="_blank"
+                       href="#">Certified by
+                        nResult</a>
+                    <a class="logo-cLevel" data-link-id="611" target="_blank"
+                       href="#">Security Certification of
+                        the myCOOP&#8482; Online application has been performed by C-Level Security</a>
+                    <a class="logo-trustE" data-link-id="612" target="_blank"
+                       href="#">Reviewed by
+                        TRUSTe, Site Privacy Statement</a>
+
+                    <p class="logo-aEfile">Authorized e-file Provider</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+

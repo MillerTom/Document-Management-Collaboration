@@ -1,0 +1,77 @@
+<div ng-init="$root.prevState='setup.resources'; $root.nextState='setup.templates'">
+    <div class=""><h1>Look and Feel</h1></div>
+    <br/>
+    <div class="">
+        <h2>Site Logo</h2>
+        <p class="text-muted"><small>You can change site logo and title here.
+        The chosen logo will appear on pages throughout the application.</small></p>
+
+        <form action="#" id="editNameFormView" novalidate="" name="form" class="">
+            <p class="error" role="alert" style="color:red" ng-show="error">Please, fill all required fields</p>
+
+            <p class="success" role="alert" style="color:green;"></p>
+
+            <div class="row">
+                <div class="form-group col-lg-5 col-md-6 col-sm-6">
+                    <label class="label-control" for="firstName">Site Title</label><br/>
+                    <input readonly type="text" id="firstName" value="Bank of America" name="firstName"
+                           class="account-info-input form-control  edit" maxlength="35" original-title="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-lg-5 col-md-6 col-sm-6">
+                    <label class="label-control" for="file">Site Logo</label><br/>
+
+                    <input type="file" id="file" name="pic" accept="image/*">
+                </div>
+            </div>
+        </form>
+        <a href="" class="btn btn-blue">Save</a>
+        <hr/>
+    </div>
+    <div class="" ng-init="isStatementEdit = false; statement='Confidential Statement goes here.'">
+        <h2>Global Report Footer</h2>
+        <p class="text-muted"><small>You may customize all report and output documents here by adding a Confidential Statement.</small></p>
+        <p ng-hide="isStatementEdit" class="">{{statement}}</p>
+        <div class="row" ng-show="isStatementEdit">
+            <div class="form-group col-lg-5 col-md-6 col-sm-6">
+            <textarea class="form-control" ng-model="statement"></textarea>
+            </div>
+        </div>
+        <a href="" class="btn btn-blue" ng-click="isStatementEdit=!isStatementEdit"><span ng-hide="isStatementEdit">Edit</span> <span ng-show="isStatementEdit">Save</span></a>
+        <hr/>
+    </div>
+    <div class="" ng-init="isCollapsed = true">
+        <h2 class="inlineBlock">Colour Scheme Settings</h2> <span style="margin-left: 7px; cursor: pointer" ng-click="showTip=!showTip" class="glyphicon glyphicon-question-sign"></span>
+        <br/><br/>
+        <div class="bg-info" collapse="!showTip">
+            <span class="lead">Help Tips</span><br/><br/>
+            Use this screen to customise the colour scheme of your site. Enter standard HTMUCSS2 colour
+            codes, or use the colour-picker to choose a new colour from the palette provided. Any changes
+            you make will immediately be reﬂected across the myCOOP installation. You can easily return
+            to the default scheme by clicking "Reset Default".
+            The default colour scheme for the site will also become the default for all spaces within it.
+            However, it is possible for space administrators to conﬁgure a different colour scheme for spaces
+            from the space administration screens.
+            <br/><br/>
+
+            <a href="" class="btn btn-default">Learn more</a>
+        </div>
+        <div class="colors" >
+            <div class="color-item" ng-repeat="color in colorScheme" style="background-color: {{color.code}}"></div>
+        </div>
+        <br/>
+        <div collapse="isCollapsed">
+            <div ng-repeat="color in colorScheme" class="row">
+                <span style="margin-top: 10px;" class="col-md-4">{{color.title}}</span>
+                <input class="col-md-2" type="text" ng-model="color.code"/>
+                <spectrum-colorpicker class="col-md-2" ng-model="color.code"></spectrum-colorpicker>
+                <br/><br/>
+            </div>
+        </div>
+        <a href="" class="btn btn-blue" ng-click="isCollapsed=!isCollapsed"><span ng-show="isCollapsed">Edit</span> <span ng-hide="isCollapsed">Save</span></a>
+
+    </div>
+
+</div>

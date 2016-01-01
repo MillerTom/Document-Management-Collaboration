@@ -1,0 +1,48 @@
+<div class="" ng-init="$root.prevState='setup.workflow'; $root.nextState='setup.hierarchy'; userSearch=''">
+    <h1>Users</h1>
+
+    <div ng-hide="$state.includes('**.add') || $state.includes('**.edit') || $state.includes('**.details')|| $state.includes('**.multiple')">
+        <!--<a href="" class="btn btn-blue" ui-sref="config.security.users.multiple">Create Multiple Users</a> <br/><br/>-->
+
+        <div class="actions-bar">
+            <div class="button-bar pull-left"><span class="pull-left">Action</span>
+
+                <div class="btn-group">
+                    <div class="action-button dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-cog"></span> <span class="">&nbsp;&#x25BE;</span>
+                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="" ng-click="deleteSelectedUsers()">Delete Selected Users</a></li>
+                        <li><a href="">Email Selected Users</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-bar pull-right">
+                <input placeholder="Name or email contains" ng-model="userSearch" type="text"/>
+            </div>
+        </div>
+
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="allUsersSelected"/> Select</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Last Active</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in users | filter:userSearch ">
+                <td><input type="checkbox" ng-model="user.selected"/></td>
+                <td><a ui-sref="config.security.users.details({ id: user.id })">{{user.firstName}} {{user.lastName}}</a></td>
+               <td>{{user.email}}</td>
+                <td>Not available</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="" class="btn btn-blue" ui-sref="config.security.users.add">Create User</a>
+    </div>
+    <div ui-view="" autoscroll="true"></div>
+</div>

@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 class="modal-title">Create Report</h3>
+</div>
+<div class="modal-body">
+    <form role="form" ng-hide="isCreated">
+        <div class="form-group">
+            <label for="name">Report Name</label>
+            <input ng-model="report.name" type="text" class="form-control" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="desc">Report Description</label>
+            <textarea id="desc" ng-model="report.description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="ds-type">Data Source</label>
+            <select ng-model="report.dataSourceType" class="form-control" id="ds-type" ng-options="ds for ds in dataSources.vals"></select>
+        </div>
+    </form>
+    <p ng-show="isCreated">
+        Your report has been successfully created. Do you want to continue with editing it?
+    </p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-hide="isCreated" ng-click="ok()">Create</button>
+    <a target="_blank" class="btn btn-primary" href="{{editUrl}}" ng-show="isCreated" ng-click="ok()">Continue</a>
+</div>

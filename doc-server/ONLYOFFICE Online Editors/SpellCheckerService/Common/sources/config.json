@@ -1,0 +1,17 @@
+﻿{
+	"log": {
+		"appenders": [
+			{ 
+				"type": "console"
+			},
+			{
+				"type": "file",
+				"filename": "C:\\Program Files (x86)\\Ascensio System SIA\\ONLYOFFICE Online Editors\\Logs\\spellcheckerservice-log-file.txt"
+			}
+		],
+		"replaceConsole": "true",
+		"levels": {
+			"nodeJS": "WARN"
+		}
+	}
+}

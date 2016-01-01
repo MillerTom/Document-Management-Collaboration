@@ -1,0 +1,111 @@
+<div>
+    <ol class="breadcrumb">
+        <li>{{orgEntity.title}}</li>
+        <li class="active">{{currentDocument.documentReference}} - {{currentDocument.title}}</li>
+    </ol>
+    <h3 class="text-center">Plan: Organization and its Context</h3>
+
+    <p>
+        <span class="bold">Area of ISO 22301 addressed: </span> <a href="">{{currentISOArea}}</a>
+    </p>
+    <div ng-show="$state.is('plan.organization')">
+        <div class="row">
+            <div class="col-md-3 text-muted">Objective:</div>
+            <div class="col-md-9">
+                <small>
+                    It is essential to understand the organization before starting a project to implement a BCMS. This step
+                    lbrings together all required information which are prerequisites for the realization of a gap analysis
+                    ibetween the existing system and the desired one. The analysis can be a summary. This step does not
+                    |require a complete strategic analysis of the organization.
+                </small>
+            </div>
+        </div>
+
+        <div class="row top-space-big">
+            <div class="col-md-3 text-muted">Implications for BCMS:</div>
+            <div class="col-md-9">
+                <small>
+
+                    1. Understand the organization and its context. <br/>
+                    2. Gather the necessary information to plan the BCMS implementation. <br/>
+                    3. Ensure that the BCMS objectives are aligned with the business objectives
+
+                </small>
+
+            </div>
+        </div>
+
+        <div class="row top-space-big">
+            <div class="col-md-3 text-muted">Objectives of this step:</div>
+        </div>
+
+        <div class="row top-space-big">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="list-group">
+                        <a ui-sref="plan" class="list-group-item text-center active"> <h2 class=" text-center">Plan</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 panels-list">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title text-center">{{organization.name}}</h2></div>
+                    <div class="list-group">
+                        <a href="{{item.state}}" ng-repeat="item in organization.items" class="list-group-item">
+                            <small class="">{{item.name}}</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 panels-list">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title text-center"><a href="{{leadership.state}}">{{leadership.name}}</a></h2></div>
+                    <div class="list-group">
+                        <a href="{{item.state}}" ng-repeat="item in leadership.items" class="list-group-item">
+                            <small class="">{{item.name}}</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 panels-list">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title text-center"><a href="{{planning.state}}">{{planning.name}}</a></h2></div>
+                    <div class="list-group">
+                        <a href="{{item.state}}" ng-repeat="item in planning.items" class="list-group-item">
+                            <small class="">{{item.name}}</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 panels-list">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title text-center"><a href="{{support.state}}">{{support.name}}</a></h2></div>
+                    <div class="list-group">
+                        <a href="{{item.state}}" ng-repeat="item in support.items" class="list-group-item">
+                            <small class="">{{item.name}}</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr/>
+
+            <a class="editDetailsSubmit btn btn-medium  btn-gray submit pull-left"
+               ui-sref="plan">Back</a>
+
+            <a class="editDetailsSubmit btn btn-medium  btn-blue submit pull-right"
+               automationid="editNameSave"
+               ui-sref="plan.organization.mission"
+               title="Save">Continue</a>
+        </div>
+    </div>
+
+    <div ui-view="" autoscroll="true"></div>
+</div>

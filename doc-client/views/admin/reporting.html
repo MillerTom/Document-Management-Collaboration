@@ -1,0 +1,29 @@
+<div class="">
+    <h1>Reporting Tool</h1>
+    <a href="" class="btn btn-blue" ng-click="createReportDialog()">Create Report</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Report Name</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tr ng-repeat="report in reports">
+            <td class="bold col-md-3">{{report.name}}</td>
+            <td class="col-md-4">{{report.description}}</td>
+            <td class="col-md-2"><a href="/reports/Editor.aspx?reportId={{report.id}}" target="_blank"
+                   class="btn btn-blue ansSm">Edit</a></td>
+            <td class="col-md-2"><a href="/reports/Viewer.aspx?reportId={{report.id}}" target="_blank"
+                   class="btn btn-blue ansSm">View</a></td>
+            <td class="col-md-1">
+                    <span class="show-hover pull-right ">
+                        <a class="glyphicon glyphicon-remove-circle delete-button"
+                           ng-click="deleteReport(report)"></a>
+                    </span>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1660934-0636-4D53-A99D-282BE5A99018}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCoop</RootNamespace>
+    <AssemblyName>MyCoop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Any.Logs">
+      <HintPath>..\Components\AnyLog\Any.Logs.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\CryptographySection.cs" />
+    <Compile Include="Data\AttributeBusinessProcess.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttributeType.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessProcess.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessProcessAttribute.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Component.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoopModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoopModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoopModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoopModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoopModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentTask.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentTemplate.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Group.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Incident.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IncidentOrgUnit.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IncidentUser.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrgUnit.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrgUnitGroupPermission.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrgUnitUserPermission.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PermissionLevel.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Report.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StateTransition.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SysEvent.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroup.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Workflow.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WorkflowAction.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WorkflowState.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WorkspaceDocumentTemplate.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WorkspaceTemplate.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WorkspaceTemplateComponent.cs">
+      <DependentUpon>CoopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IAttributeBusinessProcessRepository.cs" />
+    <Compile Include="Repositories\IAttributeTypeRepository.cs" />
+    <Compile Include="Repositories\IBusinessProcessAttributeRepository.cs" />
+    <Compile Include="Repositories\IBusinessProcessRpository.cs" />
+    <Compile Include="Repositories\IComponentRepository.cs" />
+    <Compile Include="Repositories\IDocumentTaskRepository.cs" />
+    <Compile Include="Repositories\IDocumentTemplateRepository.cs" />
+    <Compile Include="Repositories\IGroupRepository.cs" />
+    <Compile Include="Repositories\IIncidentOrgUnitRepository.cs" />
+    <Compile Include="Repositories\IIncidentRepository.cs" />
+    <Compile Include="Repositories\IIncidentUserRepository.cs" />
+    <Compile Include="Repositories\Instances\AttributeBusinessProcessRepository.cs" />
+    <Compile Include="Repositories\Instances\AttributeTypeRepository.cs" />
+    <Compile Include="Repositories\Instances\BusinessProcessAttributeRepository.cs" />
+    <Compile Include="Repositories\Instances\BusinessProcessRpository.cs" />
+    <Compile Include="Repositories\Instances\DocumentTaskRepository.cs" />
+    <Compile Include="Repositories\Instances\IncidentOrgUnitRepository.cs" />
+    <Compile Include="Repositories\Instances\IncidentRepository.cs" />
+    <Compile Include="Repositories\Instances\ComponentRepository.cs" />
+    <Compile Include="Repositories\Instances\DocumentTemplateRepository.cs" />
+    <Compile Include="Repositories\Instances\GroupRepository.cs" />
+    <Compile Include="Repositories\Instances\IncidentUserRepository.cs" />
+    <Compile Include="Repositories\Instances\OrgUnitGroupPermissionRepository.cs" />
+    <Compile Include="Repositories\Instances\OrgUnitRepository.cs" />
+    <Compile Include="Repositories\Instances\OrgUnitUserPermissionRepository.cs" />
+    <Compile Include="Repositories\Instances\PermissionLevelRepository.cs" />
+    <Compile Include="Repositories\Instances\ReportRepository.cs" />
+    <Compile Include="Repositories\Instances\RepositoryBase.cs" />
+    <Compile Include="Repositories\Instances\SysEventRepository.cs" />
+    <Compile Include="Repositories\Instances\UserGroupRepository.cs" />
+    <Compile Include="Repositories\Instances\UserRepository.cs" />
+    <Compile Include="Repositories\Instances\WorkflowRepository.cs" />
+    <Compile Include="Repositories\Instances\WorkflowStateRepository.cs" />
+    <Compile Include="Repositories\Instances\WorkspaceDocumentTemplateRepository.cs" />
+    <Compile Include="Repositories\IOrgUnitGroupPermissionRepository.cs" />
+    <Compile Include="Repositories\IOrgUnitRepository.cs" />
+    <Compile Include="Repositories\IOrgUnitUserPermissionRepository.cs" />
+    <Compile Include="Repositories\IPermissionLevelRepository.cs" />
+    <Compile Include="Repositories\IReportRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IRepositoryManager.cs" />
+    <Compile Include="Repositories\IStdRepository.cs" />
+    <Compile Include="Repositories\ISysEventRepository.cs" />
+    <Compile Include="Repositories\IUserGroupRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\Instances\WorkspaceTemplateRepository.cs" />
+    <Compile Include="Repositories\IWorkflowRepository.cs" />
+    <Compile Include="Repositories\IWorkflowStateRepository.cs" />
+    <Compile Include="Repositories\IWorkspaceDocumentTemplateRepository.cs" />
+    <Compile Include="Repositories\IWorkspaceTemplateComponentRepository.cs" />
+    <Compile Include="Repositories\IWorkspaceTemplateRepository.cs" />
+    <Compile Include="Repositories\Instances\WorkspaceTemplateComponentRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Data\CoopModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CoopModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Data\CoopModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CoopModel.edmx</DependentUpon>
+      <LastGenOutput>CoopModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\CoopModel.edmx.diagram">
+      <DependentUpon>CoopModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\CoopModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CoopModel.edmx</DependentUpon>
+      <LastGenOutput>CoopModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

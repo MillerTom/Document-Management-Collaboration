@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/FontService.ashx" hash="ffffffffd481e660" filehash="159f14e7aaee" flags="130000" assembly="App_Code" type="FontService">
+    <filedeps>
+        <filedep name="/FontService.ashx" />
+    </filedeps>
+</preserve>

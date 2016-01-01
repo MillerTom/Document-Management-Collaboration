@@ -1,0 +1,135 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="lead">Web Api</h3>
+            <div id="page">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3 class="">Templates:</h3>
+                        <hr />
+                        <fieldset class="form-horizontal">
+                            <div class="form-group">
+                                <label for="signTemplates" class="col-xs-6 control-label">
+                                    SignController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="signTemplates" data-bind="options: signTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="userTemplates" class="col-xs-6 control-label">
+                                    UserController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="userTemplates" data-bind="options: userTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="groupTemplates" class="col-xs-6 control-label">
+                                    GroupController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="groupTemplates" data-bind="options: groupTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="orgUnitTemplates" class="col-xs-6 control-label">
+                                    OrgUnitController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="orgUnitTemplates" data-bind="options: orgUnitTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="componentTemplates" class="col-xs-6 control-label">
+                                    ComponentController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="componentTemplates" data-bind="options: componentTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="documentTemplateTemplates" class="col-xs-6 control-label">
+                                    DocumentTemplateController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="documentTemplateTemplates" data-bind="options: documentTemplateTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="workspaceTemplateTemplates" class="col-xs-6 control-label">
+                                    WorkspaceTemplateController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="workspaceTemplateTemplates" data-bind="options: workspaceTemplateTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="incidentTemplates" class="col-xs-6 control-label">
+                                    IncidentController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="incidentTemplates" data-bind="options: incidentTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reportTemplates" class="col-xs-6 control-label">
+                                    ReportController:
+                                </label>
+                                <div class="col-xs-6">
+                                    <select class="form-control" id="reportTemplates" data-bind="options: reportTemplates, optionsText: 'name', value: selectedTemplate, optionsCaption: 'Choose...'"></select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-xs-9">
+                        <h3 class="">Request:</h3>
+                        <hr />
+                        <fieldset class="form-horizontal">
+                            <div class="form-group">
+                                <label for="method" class="col-xs-2 control-label">
+                                    Method:
+                                </label>
+                                <div class="col-xs-3">
+                                    <select class="form-control" id="method" data-bind="options: methods, optionsText: 'name', value: selectedMethod"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="url" class="col-xs-2 control-label">
+                                    Url:
+                                </label>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" id="url" placeholder="Url"
+                                           data-bind="value: url" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="httpBody" class="col-xs-2 control-label">
+                                    Body:
+                                </label>
+                                <div class="col-xs-6">
+                                    <textarea id="httpBody" class="form-control" rows="7" data-bind="value: httpBody"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-4 col-xs-offset-2">
+                                    <button style="width: 100px" type="button" class="btn btn-primary" data-bind="click: go">
+                                        Go
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <h3 class="">Response:</h3>
+                        <hr />
+                        <div class="panel col-xs-offset-2 col-xs-6" data-bind="text: result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="info-message" class="alert" data-bind="visible: infoVisible, css: infoStatus">
+    <button type="button" class="close" data-bind="click: closeInfo">
+        &times;</button>
+    <strong data-bind="text: infoMessage"></strong>
+</div>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/CanvasService.ashx" hash="ffffffffd481e660" filehash="ffffcbf511f92484" flags="110000" assembly="App_Web_fu-_wvjd" type="CanvasService">
+    <filedeps>
+        <filedep name="/CanvasService.ashx" />
+    </filedeps>
+</preserve>

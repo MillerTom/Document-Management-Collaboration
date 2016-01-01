@@ -1,0 +1,72 @@
+<div>
+    <div class="">
+        <div class="clearfix">
+            <h2>{{user.firstName}} {{user.lastName}}</h2>
+            <br/>
+            <a href="" class="btn ansSm pull-left" ui-sref="config.security.users.edit({id: user.id})">Edit</a>
+            <a href="" class="btn btn-blue small ansSm pull-left left-space">Change Password</a>
+            <a href="" class="btn btn-gray small ansSm pull-right" ng-click="deleteUser()">Delete</a>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-3 text-muted"><span class="pull-right">Email Address</span></div>
+            <div class="col-md-5">{{user.email}}</div>
+            <br/><br/>
+        </div>
+        <div class="row">
+            <div class="col-md-3 text-muted"><span class="pull-right">Application Access</span></div>
+
+            <div class="col-md-6">
+                <div class="row top-space-small">
+                    <div class="col-md-7"><input type="radio" name="permission" ng-model="user.permissionLevelId" value="1" disabled /> System Administrator</div>
+                    <div class="col-md-5 text-muted">(4 remaining)</div>
+                </div>
+                <div class="row top-space-small" >
+                    <div class="col-md-7"><input type="radio" name="permission" ng-model="user.permissionLevelId" value="2" disabled/> Workspace Administrator</div>
+                    <div class="col-md-5 text-muted">(5 remaining)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7"><input type="radio" checked name="permission" ng-model="user.permissionLevelId" value="3" disabled/> Contributor</div>
+                    <div class="col-md-5 text-muted">(5 remaining)</div>
+                </div>
+                <div class="row top-space-small">
+                    <div class="col-md-7"><input type="radio" name="permission" ng-model="user.permissionLevelId" value="4" disabled/> Approver</div>
+                    <div class="col-md-5 text-muted">(16 remaining)</div>
+                </div>
+                <div class="row top-space-small">
+                    <div class="col-md-7"><input type="radio" name="permission" ng-model="user.permissionLevelId" value="5" disabled/> Browse</div>
+                    <div class="col-md-5 text-muted">(Unlimited)</div>
+                </div>
+            </div>
+            <br/><br/>
+        </div>
+        <br/>
+
+
+        <h3>Group Assignments</h3>
+        <span class="text-muted">
+
+        <table class="table top-space-big">
+            <thead>
+            <tr>
+                <th>Group Name</th>
+                <th>Description</th>
+                <th>Date added</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="group in userGroups">
+                <td><a ui-sref="config.security.groups.details({id: group.id})">{{group.name}}</a></td>
+                <td>{{group.description}}</td>
+                <td>{{group.addTime | date}}</td>
+                <!--<td><a href="" class="btn-sm btn btn-blue">Remove</a></td>-->
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+
+        <a href="" class="btn btn-blue" ui-sref="config.security.users">Back to Users List</a>
+        <br/><br/>
+    </div>
+
+</div>
