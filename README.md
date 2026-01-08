@@ -7,7 +7,7 @@
 
 > **A full-stack enterprise document management and real-time collaboration system with role-based access control, business process management, and integrated document editing capabilities.**
 
-Built with ASP.NET Web API, Entity Framework, AngularJS, and ONLYOFFICE document editors, this platform demonstrates comprehensive full-stack development expertise across multiple architectural patterns and enterprise technologies.
+Built with JavaScript, C#.NET Web API, Entity Framework, AngularJS, and ONLYOFFICE document editors, this platform demonstrates comprehensive full-stack development expertise across multiple architectural patterns and enterprise technologies.
 
 ---
 
